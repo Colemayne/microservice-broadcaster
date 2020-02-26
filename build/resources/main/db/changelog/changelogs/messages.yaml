@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_messages_table
+      author: Coleman
+      changes:
+        - createTable:
+            tableName: MESSAGES
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: author
+                  type: varchar(64)
+              - column:
+                  name: time
+                  type: datetime
+              - column:
+                  name: content
+                  type: mediumtext
